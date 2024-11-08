@@ -104,7 +104,7 @@ const computerMove = () => {
             gameDraw(); // Check for draw
         }
 
-        turnO = true; // Switch turns back to player O
+        turnO = !turnO; // Switch turns
     }
 };
 
@@ -123,8 +123,10 @@ boxes.forEach((box) => {
                 gameDraw(); // Check for draw
             }
 
-            turnO = false; // Switch turns to computer
-            if (gameModeSelect.value === "computer") {
+            turnO = !turnO; // Switch turns
+            
+            // If it's now the computer's turn, make a move
+            if (!turnO && gameModeSelect.value === "computer") {
                 setTimeout(computerMove, 500); // Add a slight delay for better UX
             }
         }
