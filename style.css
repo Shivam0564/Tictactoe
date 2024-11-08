@@ -9,6 +9,15 @@
     font-size: 30px;
     font-family:Georgia, 'Times New Roman', Times, serif;
   }
+
+  #game-mode {
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #191913;
+    color: #fff;
+    border-radius: 0.5rem;
+    border: none;
+  }
   
   .container {
     height: 80vh;
